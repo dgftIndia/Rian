@@ -1,0 +1,159 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Initial padding for small screens */
+  background: linear-gradient(#056a99);
+  max-width: 1200px; /* Set a max-width to center the content */
+  margin: 0 auto; /* Center the navbar */
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0 10px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  font-size: 14px; /* Increased font size for better readability */
+}
+
+.nav-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 25px;
+  cursor: pointer; /* Add this line to change cursor to pointer */
+}
+
+.dropdown {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none; /* Hide by default */
+  width: 200px; /* Adjust this width as necessary */
+  text-align: left;
+}
+
+.nav-item:hover .dropdown,
+.dropdown:hover {
+  display: block; /* Show on hover */
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.button {
+  padding: 5px 10px;
+  background-color: #f5f5f5;
+  color: rgb(8, 75, 143);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px; /* Same font size as nav items */
+  margin-left: 10px; /* Adjust margin */
+}
+
+.button:hover {
+  background-color: #0a5b8b;
+}
+
+
+
+/* Media queries for different screen sizes */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 10px 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 10px 60px;
+  }
+}
+
+
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 5px 20px;
+  
+  margin: 0 auto; /* Center the navbar */
+}
+
+.top-bar-left span {
+  font-size: 14px;
+}
+
+.top-bar-right button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.top-bar-right button:hover {
+  text-decoration: none;
+}
+
+
+/* Media queries for top bar */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .top-bar-left,
+  .top-bar-right {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .top-bar-right button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-bar {
+    padding: 5px 10px;
+  }
+
+  .top-bar-left span {
+    font-size: 12px;
+  }
+
+  .top-bar-right button {
+    font-size: 12px;
+  }
+}

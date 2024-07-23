@@ -1,0 +1,25 @@
+/* BlueBoxSection.css */
+.blue-box-section {
+    text-align: center;
+    margin-top: 20px; /* Adjust spacing as needed */
+  }
+  
+  .section-header {
+    font-size: 24px; /* Example font size */
+    color: #ffffff; /* Example color */
+  }
+  
+  .blue-box {
+    background-color: #3498db; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 30px; /* Padding inside the blue box */
+    margin-top: 20px; /* Adjust spacing as needed */
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  
+  .box-title {
+    font-size: 18px; /* Example font size */
+    font-weight: bold; /* Example font weight */
+  }
+  

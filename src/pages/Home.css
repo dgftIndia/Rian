@@ -1,0 +1,77 @@
+/* src/App.css */
+.App {
+    text-align: center;
+    background: linear-gradient(to bottom, #056a99, #000000);
+    min-height: 100vh;
+    
+  
+  }
+  
+  
+  
+  
+  .App-header {
+    padding: 50px 20px;
+  }
+  
+  .content-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .content-types button {
+    margin: 5px;
+    padding: 8px 25px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 12px;
+  }
+  
+  .content-types button:hover {
+    background-color: rgba(105, 11, 131, 0.2);
+  }
+  
+  .demo-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(78, 71, 212);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+  }
+  
+  .demo-button:hover {
+    background-color: #38a9d2;
+  }
+  
+  /* Media queries for different screen sizes */
+  @media (max-width: 1199px) {
+    .content-types button {
+      width: 20%; /* 5 buttons per row */
+    }
+  }
+  
+  @media (max-width: 959px) {
+    .content-types button {
+      width: 25%; /* 4 buttons per row */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .content-types button {
+      width: 45%; /* 2 buttons per row */
+    }
+  }
+  
+  @media (max-width: 479px) {
+    .content-types button {
+      width: 100%; /* 1 button per row */
+    }
+  }

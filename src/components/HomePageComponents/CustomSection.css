@@ -1,0 +1,117 @@
+.custom-section {
+    background-color: #006494;
+    padding: 2rem 5rem;
+    text-align: center;
+    color: white;
+    max-width: 2000px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.custom-header-for-localization {
+    font-size: 3rem;
+    line-height: 1.2; /* Adjusted line height */
+    margin-bottom: 1rem;
+}
+
+.custom-text {
+    font-size: 1.5rem;
+    line-height: 1.5; /* Adjusted line height */
+    margin-bottom: 1rem;
+}
+
+.custom-button {
+    background-color: white;
+    color: #9b51e0;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-bottom: 2px;
+}
+
+.custom-button:hover {
+    background-color: #9b51e0;
+    color: white;
+}
+
+.custom-image {
+    width: 100%;
+    height: auto;
+    margin-top: 2px;
+    max-width: 1200px; /* Ensures a maximum width for the image */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .custom-section {
+        padding: 1.5rem 3rem;
+    }
+
+    .custom-header-for-localization {
+        font-size: 2rem; /* Adjusted font size */
+    }
+
+    .custom-text {
+        font-size: 0.9rem; /* Adjusted font size */
+    }
+
+    .custom-image {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 992px) {
+    .custom-section {
+        padding: 1rem 2rem;
+    }
+
+    .custom-header-for-localization {
+        font-size: 1.75rem; /* Adjusted font size */
+    }
+
+    .custom-text {
+        font-size: 0.85rem; /* Adjusted font size */
+    }
+
+    .custom-image {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-section {
+        padding: 0.75rem 1rem;
+    }
+
+    .custom-header-for-localization {
+        font-size: 1.5rem; /* Adjusted font size */
+    }
+
+    .custom-text {
+        font-size: 0.8rem; /* Adjusted font size */
+    }
+
+    .custom-image {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-section {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .custom-header-for-localization {
+        font-size: 1.25rem; /* Adjusted font size */
+    }
+
+    .custom-text {
+        font-size: 0.75rem; /* Adjusted font size */
+    }
+
+    .custom-image {
+        max-width: 400px;
+    }
+}

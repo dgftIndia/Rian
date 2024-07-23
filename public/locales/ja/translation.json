@@ -1,0 +1,68 @@
+{
+    "lan": "en",
+    "nav_solutions": "ソリューション",
+    "nav_resources": "リソース",
+    "nav_press_release": "プレスリリース",
+    "nav_events": "イベント",
+    "nav_about": "弊社について",
+    "nav_company_profile": "会社概要",
+    "nav_blogs": "ブログ",
+    "nav_vendor_registration": "ベンダー登録",
+    "nav_login": "ログイン",
+    "nav_book_demo": "デモを予約する",
+
+
+    
+        "home_title": "ダビングとローカリゼーション",
+        "home_subtitle": "AI駆動の人間のタッチ",
+        "content_youTubeVideos": "YouTubeビデオ",
+        "content_animatedShows": "アニメーション番組",
+        "content_featureFilms": "長編映画/短編映画",
+        "content_corporateVideo": "企業ビデオ",
+        "content_documentary": "ドキュメンタリー",
+        "content_audioBooks": "オーディオブック",
+        "content_eLearningVideo": "eラーニングビデオ",
+        "content_commercialAds": "コマーシャル広告",
+        "content_podcasts": "ポッドキャスト",
+        "content_videoGames": "ビデオゲーム",
+        "book_a_demo": "デモを予約",
+
+
+
+        "form_submission_failed": "フォームの送信に失敗しました。もう一度お試しください。",
+        "form_submission_error": "フォームの送信中にエラーが発生しました。もう一度お試しください。",
+        "email_error": "メールの送信中にエラーが発生しました。もう一度お試しください。",
+        "thank_you": "ありがとうございました！",
+        "thank_you_message1": "フォームに記入いただきありがとうございます。できるだけ早くご連絡いたします。",
+        "thank_you_message2": "その間、私たちのサービスについてさらに探索し、目標を達成する方法をご覧ください。素晴らしい一日をお過ごしください！",
+        "visit_us_again": "またお越しください！",
+        "book_a_demo_title": "デモを予約",
+        "book_a_demo_message": "今日中にご連絡いただき、コンテンツの可能性を解き放ちましょう！",
+        "first_name": "ファーストネーム*",
+        "last_name": "苗字*",
+        "company_name": "会社名*",
+        "business_email": "ビジネスメール*",
+        "phone_number": "電話番号*",
+        "content_type_label": "Rianとローカライズできるコンテンツの種類（該当するものをすべて選択してください）*",
+        "content_youTubeVideos": "YouTubeビデオ",
+        "content_animatedShows": "アニメーション番組",
+        "content_featureFilms": "長編映画/短編映画",
+        "content_corporateVideo": "企業ビデオ",
+        "content_documentary": "ドキュメンタリー",
+        "content_audioBooks": "オーディオブック",
+        "content_eLearningVideo": "eラーニングビデオ",
+        "content_commercialAds": "コマーシャル広告",
+        "content_podcasts": "ポッドキャスト",
+        "content_videoGames": "ビデオゲーム",
+        "post_production_team": "ポストプロダクションチームには何人の人がいますか？*",
+        "solo": "私はソロのポストプロダクションのプロフェッショナルです",
+        "small_team": "小規模チーム（2〜5人）",
+        "medium_team": "中規模チーム（6〜10人）",
+        "large_team": "大規模チーム（11人以上）",
+        "agreement_text": "\"Let's talk\"をクリックすることで、プライバシーポリシーに同意します。 同意することで、製品やサービスについて連絡を受ける場合があります。",
+        "lets_talk": "話しましょう"
+      
+  
+
+
+  }

@@ -1,0 +1,22 @@
+/* src/TitleAndVideoSection.css */
+.title-and-video-section {
+    padding-top: 40px;
+    text-align: center;
+    margin-top: 20px; /* Adjust spacing as needed */
+  }
+  
+  .section-title {
+    font-size: 24px; /* Example font size */
+    color: #f9f9f9; /* Example color */
+  }
+  
+  .video-container {
+    margin-top: 20px; /* Adjust spacing as needed */
+  }
+  
+  .video-container iframe {
+    width: 100%; /* Ensure the video fills its container */
+    max-width: 800px; /* Adjust maximum width as needed */
+    height: 400px; /* Adjust height as needed */
+  }
+  
