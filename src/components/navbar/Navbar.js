@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import {Link,useNavigate} from 'react-router-dom';
-import logo from '../../Assets/images/file.png';
+import { Link, useNavigate } from 'react-router-dom';
+import logo from '../../Assets/images/rianhd.png';
 import { useTranslation } from 'react-i18next';
-import i18next from "i18next";
-
 
 const Navbar = () => {
   const [showResources, setShowResources] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
@@ -17,21 +16,39 @@ const Navbar = () => {
     i18n.changeLanguage(lng);
   };
 
+  // Scroll event logic
+  useEffect(() => {
+    let lastScrollTop = 0;
+    const handleScroll = () => {
+      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+      if (currentScrollTop > lastScrollTop) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For mobile or negative scrolling
+    };
 
+    window.addEventListener('scroll', handleScroll);
 
-  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
- 
-
-   return (
-    <div className="navbar-container">
+  return (
+    <div className={`navbar-container ${isVisible ? 'visible' : 'hidden'}`}>
       <div className="top-bar">
         <div className="top-bar-left">
           <span>Rikaian Technologies</span>
         </div>
         <div className="top-bar-right">
-          <button onClick={() => changeLanguage(t("lan"))}>{t("lan")==="en"?"English":"日本語"}</button>
+          <button onClick={() => changeLanguage(t("lan"))}>
+            {t("lan") === "en" ? "English" : "日本語"}
+          </button>
         </div>
       </div>
       <div className="navbar">

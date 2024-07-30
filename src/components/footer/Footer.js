@@ -6,15 +6,20 @@ import indiaFlag from '../../Assets/images/india.png'; // Adjust the path as nee
 import japanFlag from '../../Assets/images/japan.png'; // Adjust the path as needed
 import linkedinIcon from '../../Assets/images/youtube.png'; // Adjust the path as needed
 import youtubeIcon from '../../Assets/images/Linkedin.png'; // Adjust the path as needed
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Footer = () => {
     const navigate = useNavigate();
+
+
+    
     return (
         <footer className="footer">
-            <div className="footer-top">
-                <h1>Go beyond global boundaries</h1>
+            <div className="footer-top" >
+                <h1 data-aos="fade-up">Go beyond global boundaries</h1>
                 <br />
-                <button className="button" onClick={()=>navigate("/book-a-demo")}>
+                <button className="button" data-aos="fade-up" onClick={()=>navigate("/book-a-demo")}>
           Book A Demo
         </button>
                 <br />
@@ -51,7 +56,7 @@ const Footer = () => {
                             <input type="text" name="name" />
                         </label>
                         <label>
-                            Address:
+                            Email:
                             <input type="text" name="address" />
                         </label>
                         <button type="submit" className="subscribe-button">Subscribe</button>

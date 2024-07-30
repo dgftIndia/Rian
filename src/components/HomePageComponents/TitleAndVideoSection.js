@@ -18,7 +18,7 @@ const TitleAndVideoSection = () => {
         className="section-title"
         data-aos="fade-up" // AOS attribute
       >
-        Reach a Global Audience: Seamless Video Localization
+        Use Cases
       </h2>
       <div
         className="video-container"

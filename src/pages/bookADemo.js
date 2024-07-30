@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import emailjs from 'emailjs-com';
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer';
+
 import '../pages/bookADemo.css'; // Create this CSS file to contain the styles
 import { useTranslation } from 'react-i18next';
+import Base from "../components/navbar/Base";
 
 const BookADemo = () => {
   const { t } = useTranslation();
@@ -117,8 +117,10 @@ const BookADemo = () => {
   };
 
   return (
+    <Base>
+    
     <section className="form-section">
-      <Navbar />
+      
       <div className="form-container">
         {showThankYou ? (
           <div id="thank-you" className="thank-you-container">
@@ -174,8 +176,9 @@ const BookADemo = () => {
         )}
       </div>
       <br />
-      <Footer />
+      
     </section>
+    </Base>
   );
 };
 

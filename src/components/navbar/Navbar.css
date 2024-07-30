@@ -1,11 +1,26 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transform: translateY(0);
+  background-color: rgba(10, 10, 10, 0.8); /* Translucent background */
+  backdrop-filter: blur(5px); /* Optional blur effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
+}
+
+.navbar-container.hidden {
+  transform: translateY(-100%); /* Hide navbar */
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px; /* Initial padding for small screens */
-  background: linear-gradient(#056a99);
-  max-width: 1200px; /* Set a max-width to center the content */
-  margin: 0 auto; /* Center the navbar */
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .nav-left,
@@ -16,10 +31,10 @@
 
 .nav-item {
   margin: 0 10px;
-  color: white;
+  color: #fff;
   cursor: pointer;
   position: relative;
-  font-size: 14px; /* Increased font size for better readability */
+  font-size: 14px;
 }
 
 .nav-center {
@@ -30,26 +45,26 @@
 }
 
 .logo {
-  height: 25px;
-  cursor: pointer; /* Add this line to change cursor to pointer */
+  height: 30px;
+  cursor: pointer;
 }
 
 .dropdown {
   position: absolute;
   top: 30px;
   left: 0;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   color: black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  display: none; /* Hide by default */
-  width: 200px; /* Adjust this width as necessary */
+  display: none;
+  width: 200px;
   text-align: left;
 }
 
 .nav-item:hover .dropdown,
 .dropdown:hover {
-  display: block; /* Show on hover */
+  display: block;
 }
 
 .dropdown-item {
@@ -69,40 +84,23 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-size: 14px; /* Same font size as nav items */
-  margin-left: 10px; /* Adjust margin */
+  font-size: 14px;
+  margin-left: 10px;
 }
 
 .button:hover {
   background-color: #0a5b8b;
 }
 
-
-
-/* Media queries for different screen sizes */
-@media (min-width: 768px) {
-  .navbar {
-    padding: 10px 40px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .navbar {
-    padding: 10px 60px;
-  }
-}
-
-
-
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+
   color: white;
   padding: 5px 20px;
-  
-  margin: 0 auto; /* Center the navbar */
+  margin: 0 auto;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .top-bar-left span {
@@ -123,8 +121,18 @@
   text-decoration: none;
 }
 
+@media (min-width: 768px) {
+  .navbar {
+    padding: 10px 40px;
+  }
+}
 
-/* Media queries for top bar */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 10px 60px;
+  }
+}
+
 @media (max-width: 768px) {
   .top-bar {
     flex-direction: column;
