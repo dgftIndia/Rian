@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import AllBlogs from './pages/blogs/AllBlogs';
 import BlogDetail from './pages/blogs/BlogDetail';
 import BookADemo from './pages/bookADemo';
-
+import './index.css';
 
 
 const App = () => {
