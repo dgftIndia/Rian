@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Footer from "../footer/Footer";
 import Navbar from "./Navbar";
 
 const Base = ({ title = "Rian", children }) => {
@@ -14,7 +13,7 @@ const Base = ({ title = "Rian", children }) => {
       
         {children}
      
-      <Footer />
+      
     </div>
   );
 };

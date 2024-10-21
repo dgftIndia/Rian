@@ -6,6 +6,7 @@ import AllBlogs from './pages/blogs/AllBlogs';
 import BlogDetail from './pages/blogs/BlogDetail';
 import BookADemo from './pages/bookADemo';
 import './index.css';
+import Footer from './components/footer/Footer';
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         {/* <Route path="/press-release" element={<div>Press Release Page</div>} />
         <Route path="/events" element={<div>Events Page</div>} /> */}
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

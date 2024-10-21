@@ -6,7 +6,6 @@ import indiaFlag from '../../Assets/images/india.png'; // Adjust the path as nee
 import japanFlag from '../../Assets/images/japan.png'; // Adjust the path as needed
 import linkedinIcon from '../../Assets/images/youtube.png'; // Adjust the path as needed
 import youtubeIcon from '../../Assets/images/Linkedin.png'; // Adjust the path as needed
-
 import 'aos/dist/aos.css';
 
 const Footer = () => {

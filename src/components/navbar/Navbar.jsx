@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import './Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../Assets/images/rianhd.png';
 import { useTranslation } from 'react-i18next';
@@ -53,15 +52,10 @@ const Navbar = () => {
       </div>
       <div className="navbar">
         <div className="nav-left">
-          <div
-            className="nav-item"
-            onMouseEnter={() => setShowResources(true)}
-            onMouseLeave={() => setShowResources(false)}
-          >
-            {t('nav_solutions')}
-          </div>
-          <div className="nav-item" onMouseEnter={() => setShowResources(true)} onMouseLeave={() => setShowResources(false)}>
-            {t('nav_resources')}
+          <div className="nav-item">
+            <span onClick={() => setShowResources(!showResources)}>
+              {t('nav_resources')}
+            </span>
             {showResources && (
               <div className="dropdown">
                 <Link to="/press-release" className="dropdown-item">
@@ -73,8 +67,10 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <div className="nav-item" onMouseEnter={() => setShowAbout(true)} onMouseLeave={() => setShowAbout(false)}>
-            {t('nav_about')}
+          <div className="nav-item">
+            <span onClick={() => setShowAbout(!showAbout)}>
+              {t('nav_about')}
+            </span>
             {showAbout && (
               <div className="dropdown">
                 <div className="dropdown-item">{t('nav_company_profile')}</div>

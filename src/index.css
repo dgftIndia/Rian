@@ -27,12 +27,36 @@
     @apply text-gray-500 text-sm mb-2;
   }
   
+/* Define custom keyframes for animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Footer Styling */
 .footer {
     @apply flex flex-col items-center bg-black text-white py-5 px-10 text-center;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .footer-top {
     @apply mb-5 max-w-[1200px] w-full;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .footer-top h1 {
@@ -41,14 +65,17 @@
 
 .demo-button {
     @apply mt-2 py-2 px-5 bg-white border-none text-black cursor-pointer;
+    animation: fadeIn 1.5s ease-in-out 0.5s;
 }
 
 .footer-middle {
     @apply flex justify-between items-start flex-wrap mb-5;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .footer-address {
     @apply text-left w-[35%];
+    animation: slideIn 1.5s ease-in-out 0.3s;
 }
 
 .footer-address img {
@@ -61,6 +88,7 @@
 
 .footer-form {
     @apply w-[30%];
+    animation: slideIn 1.5s ease-in-out 0.3s;
 }
 
 .footer-form form {
@@ -77,14 +105,17 @@
 
 .subscribe-button {
     @apply py-2 bg-green-600 border-none text-white cursor-pointer self-start;
+    animation: fadeIn 1.8s ease-in-out;
 }
 
 .footer-bottom {
     @apply mt-5 border-t border-gray-800 pt-5;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .footer-nav {
     @apply flex justify-center flex-wrap;
+    animation: fadeIn 1.7s ease-in-out;
 }
 
 .footer-nav a {
@@ -97,6 +128,7 @@
 
 .footer-social {
     @apply my-2;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .footer-social a {
@@ -109,13 +141,14 @@
 
 .footer p {
     @apply my-2;
+    animation: fadeIn 2.5s ease-in-out;
 }
 
 /* Media Queries */
-
 @media (max-width: 768px) {
     .footer-middle {
         @apply flex-col items-center;
+        animation: fadeIn 1.5s ease-in-out;
     }
 
     .footer-address,
@@ -149,6 +182,7 @@
         @apply mx-1.5;
     }
 }
+
 .blue-box-section {
     @apply text-center mt-5; /* Adjust spacing as needed */
 }
