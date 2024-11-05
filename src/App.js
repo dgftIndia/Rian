@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -7,8 +6,9 @@ import BlogDetail from './pages/blogs/BlogDetail';
 import BookADemo from './pages/bookADemo';
 import './index.css';
 import Footer from './components/footer/Footer';
-
-
+import PressRelease from './pages/pressRelease';
+import CommunityPage from './pages/communityPage';
+import './i18n';
 const App = () => {
   return (
     <BrowserRouter>
@@ -16,17 +16,13 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<AllBlogs />} />
         <Route path="/book-a-demo" element={<BookADemo />} />
-         <Route path="/blog/:id" element={<BlogDetail />} />
-        {/* <Route path="/vendor-registration" element={<div>Vendor Registration Page</div>} /> */}
-        {/* <Route path="/login" element={<div>Login Page</div>} /> */}
-        {/* <Route path="/press-release" element={<div>Press Release Page</div>} />
-        <Route path="/events" element={<div>Events Page</div>} /> */}
+        <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/press-release" element={<PressRelease />} /> {/* Fixed route path */}
+        <Route path="/communityPage" element={<CommunityPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
   );
 };
-
-
 
 export default App;

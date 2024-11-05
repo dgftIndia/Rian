@@ -16,7 +16,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-top" >
-                <h1 data-aos="fade-up">Go beyond global boundaries</h1>
+                <h1 >Go beyond global boundaries</h1>
                 <br />
                 <button className="button" data-aos="fade-up" onClick={()=>navigate("/book-a-demo")}>
           Book A Demo

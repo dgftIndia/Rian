@@ -10,6 +10,7 @@
   "nav_vendor_registration": "Vendor Registration",
   "nav_login": "Login",
   "nav_book_demo": "Book A Demo",
+  "nav_community_page":"Community Page",
 
   
 
@@ -67,4 +68,5 @@
   "large_team": "Large team (11+ people)",
   "agreement_text": "By clicking on \"Let's talk\" I agree to the Privacy Policy. By agreeing you may be contacted about products and services.",
   "lets_talk": "Let's talk"
+  
   }

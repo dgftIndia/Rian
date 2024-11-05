@@ -13,7 +13,8 @@ module.exports = {
         'custom-yellow': '#fcb900',
         'custom-light-blue': '#8ed1fc',
         'custom-violet': '#9118e7',
-        'custom-orange': '#fb8200'
+        'custom-orange': '#fb8200',
+        'crimson': '#DC143C'
       },
       fontSize: {
         '1.5xl': '1.375rem',
