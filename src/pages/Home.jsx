@@ -1,11 +1,8 @@
 // src/pages/Home.js
 import React, { useEffect } from 'react';
 
-
 import BlueBoxSection from '../components/HomePageComponents/BlueBoxSection';
 import VideoSection from '../components/HomePageComponents/VideoSection';
-
-
 import StatsSection from '../components/HomePageComponents/StatsSection';
 import Services from '../components/HomePageComponents/Services';
 import CustomSection from '../components/HomePageComponents/CustomSection';
@@ -18,11 +15,8 @@ import 'aos/dist/aos.css';
 // import { useTranslation } from 'react-i18next';
 import Base from "../components/navbar/Base";
 
-
 const Home = () => {
   // const { t } = useTranslation();
-
-
 
   useEffect(() => {
     AOS.init({
@@ -59,32 +53,23 @@ const Home = () => {
 
   return (
     <Base>
-  
-    
-    <div className="App">
-      
-      <header className="App-header">
-      
-        <HeroSection />
-        
-        <h2 className="subtitle"  data-aos="fade-up">Reach a Global Audience: Seamless Video Localization</h2>
-        <h2 className="subtitle"  data-aos="fade-up">Use Cases</h2>
-         
-        <VideoSection videos={videos1} />
-          
-        
-         
-        
-        <BlueBoxSection />
-        <h2 className="subtitle"  data-aos="fade-up">AI and Human voice</h2>
-        <VideoSection videos={videos2} />
-        <StatsSection />
-        <Services />
-        <CustomSection />
-        {/* <ThreeBoxes />  */}
-        
-      </header>
-    </div>
+      <div className="App">
+        <div className="App-content"> {/* New container to control overflow */}
+          <header className="App-header">
+            <HeroSection />
+            <h2 className="subtitle"  data-aos="fade-up">Reach a Global Audience: Seamless Video Localization</h2>
+            <h2 className="subtitle"  data-aos="fade-up">Use Cases</h2>
+            <VideoSection videos={videos1} />
+            <BlueBoxSection />
+            <h2 className="subtitle"  data-aos="fade-up">AI and Human voice</h2>
+            <VideoSection videos={videos2} />
+            <StatsSection />
+            <Services />
+            <CustomSection />
+            {/* <ThreeBoxes />  */}
+          </header>
+        </div>
+      </div>
     </Base>
   );
 };

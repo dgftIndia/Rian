@@ -6,6 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        fadeIn: 'fadeIn 1.5s ease-in-out 0.5s forwards',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+      },
       colors: {
         'custom-blue': '#006494',
         'custom-black': '#1a1a1e',

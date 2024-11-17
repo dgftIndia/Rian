@@ -1,28 +1,48 @@
-import React from 'react';
-// import './HeroSection.css';
+import React, { useState } from 'react';
+
 
 const HeroSection = () => {
+  const [selectedButtons, setSelectedButtons] = useState([]);
+
+  const handleButtonClick = (buttonText) => {
+    setSelectedButtons((prevSelected) =>
+      prevSelected.includes(buttonText)
+        ? prevSelected.filter((text) => text !== buttonText) // Unselect if already selected
+        : [...prevSelected, buttonText] // Select if not selected
+    );
+  };
+
   return (
     <div className="hero-section">
       <h1 className="title">Dubbing & Localization</h1>
       <h2 className="subtitle">AI Powered with Human Touch</h2>
       <p className="description">Type of Content you can LOCALIZE with Rian</p>
       <div className="content-types">
-        <button className="content-button">YouTube Videos</button>
-        <button className="content-button">Animated Shows</button>
-        <button className="content-button">Feature Films/Short Films</button>
-        <button className="content-button">Corporate video</button>
-        <button className="content-button">Documentary</button>
-        <button className="content-button">Audio Books</button>
-        <button className="content-button">eLearning video</button>
-        <button className="content-button">Commercial Ads</button>
-        <button className="content-button">Podcasts</button>
-        <button className="content-button">Video Games</button>
+        {[
+          "YouTube Videos",
+          "Animated Shows",
+          "Feature/Short Films",
+          "Corporate video",
+          "Documentary",
+          "Audio Books",
+          "eLearning video",
+          "Commercial Ads",
+          "Podcasts",
+          "Video Games",
+        ].map((contentType) => (
+          <button
+            key={contentType}
+            className={`content-button ${
+              selectedButtons.includes(contentType) ? "selected" : ""
+            }`}
+            onClick={() => handleButtonClick(contentType)}
+          >
+            {contentType}
+          </button>
+        ))}
       </div>
       <button className="demo-button">Book A Demo</button>
-      
     </div>
-    
   );
 };
 

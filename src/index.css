@@ -65,15 +65,21 @@
     }
 }
 
-/* Footer Styling */
+/* Footer Styling starts */
+/* Footer Styling starts */
+.footer-container {
+    @apply relative w-full flex flex-col items-center;
+}
+
 .footer {
-    @apply flex flex-col items-center bg-black text-white py-5 px-10 text-center;
-    animation: fadeIn 1s ease-in-out forwards; /* Keep animation on load */
+    @apply bg-black text-white py-5 px-10 text-center w-full;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .footer-top {
     @apply mb-5 max-w-[1200px] w-full;
-    animation: fadeIn 1.5s ease-in-out forwards; /* Keep animation on load */
+    animation: fadeIn 1.5s ease-in-out forwards;
+    margin-left: 65px; 
 }
 
 .footer-top h1 {
@@ -81,31 +87,30 @@
 }
 
 .demo-button {
-    @apply mt-2 py-2 px-5 bg-white border-none text-black cursor-pointer;
-    animation: fadeIn 1.5s ease-in-out 0.5s forwards; /* Keep animation on load */
+    @apply py-2 px-5 bg-custom-purple text-white cursor-pointer mt-3;
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .footer-middle {
-    @apply flex justify-between items-start flex-wrap mb-5;
-    animation: fadeIn 2s ease-in-out forwards; /* Keep animation on load */
+    @apply flex flex-row justify-between items-start flex-wrap w-full max-w-[1200px] mb-5;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 .footer-address {
-    @apply text-left w-[35%];
-    animation: slideIn 1.5s ease-in-out 0.3s forwards; /* Keep animation on load */
+    @apply text-left w-[30%];
+    margin-left: 20px; /* Adjust this value to move it further right */
+    animation: slideIn 1.5s ease-in-out 0.3s forwards;
 }
 
 .footer-address img {
     @apply w-5 h-auto mr-2 align-top;
 }
 
-.footer-address address {
-    @apply inline-block align-top;
-}
-
 .footer-form {
     @apply w-[30%];
-    animation: slideIn 1.5s ease-in-out 0.3s forwards; /* Keep animation on load */
+    position: relative;
+    left: 140px; /* Adjust this value to move the form further right */
+    animation: slideIn 1.5s ease-in-out 0.3s forwards;
 }
 
 .footer-form form {
@@ -113,26 +118,30 @@
 }
 
 .footer-form label {
-    @apply mb-2 w-full flex justify-between;
+    @apply mb-2 w-full flex items-center; /* Use `items-center` to align vertically */
 }
 
 .footer-form input {
-    @apply p-1 ml-2 w-[60%];
+    @apply p-1 w-[60%] rounded-md  ml-auto;
+    /* Smaller left margin to control spacing */
 }
 
 .subscribe-button {
-    @apply py-2 bg-green-600 border-none text-white cursor-pointer self-start;
-    animation: fadeIn 1.8s ease-in-out forwards; /* Keep animation on load */
+    @apply py-3 px-3 bg-green-600 border-none text-white cursor-pointer self-start rounded-md;
+    margin-left: 200px; /* Moves button to the right and makes it fully rounded */
+    animation: fadeIn 1.8s ease-in-out forwards;
 }
 
+
 .footer-bottom {
-    @apply mt-5 border-t border-gray-800 pt-5;
-    animation: fadeIn 2s ease-in-out forwards; /* Keep animation on load */
+    @apply mt-5 border-t border-gray-800 pt-5 w-full;
+    animation: fadeIn 2s ease-in-out forwards;
+    text-align: center;
 }
 
 .footer-nav {
     @apply flex justify-center flex-wrap;
-    animation: fadeIn 1.7s ease-in-out forwards; /* Keep animation on load */
+    animation: fadeIn 1.7s ease-in-out forwards;
 }
 
 .footer-nav a {
@@ -144,12 +153,15 @@
 }
 
 .footer-social {
-    @apply my-2;
-    animation: fadeIn 1.5s ease-in-out forwards; /* Keep animation on load */
+    @apply flex justify-center my-2;
+    margin-top: 20px; /* Adjust this value to move it further down */
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
+
 
 .footer-social a {
     @apply mx-2;
+    margin-top: 11px;
 }
 
 .footer-social img {
@@ -158,8 +170,10 @@
 
 .footer p {
     @apply my-2;
-    animation: fadeIn 2.5s ease-in-out forwards; /* Keep animation on load */
+    animation: fadeIn 2.5s ease-in-out forwards;
 }
+
+
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -215,8 +229,15 @@
 .box-title {
     @apply text-lg font-bold; /* Example font size and weight */
 }
+
+
+/* This is the start for the custom section*/
 .custom-section {
     @apply bg-[#006494] p-8 text-center text-white max-w-[2000px] mx-auto rounded-[20px];
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 110vh; /* Adjust as needed for vertical centering */
 }
 
 .custom-header-for-localization {
@@ -237,7 +258,9 @@
 
 .custom-image {
     @apply w-full h-auto mt-0.5 max-w-[1200px];
+    margin-top: 20px; 
 }
+
 
 /* Media Queries */
 
@@ -312,6 +335,9 @@
         @apply max-w-[400px];
     }
 }
+/*This is the end for custom section*/
+
+
 .hero-section {
     @apply text-center bg-gradient-to-b from-[#006494] to-[#000000] py-20 pt-[82px] text-white;
 }
@@ -319,6 +345,8 @@
 .title {
     @apply text-[3.5em] mb-2 text-[#00a6fb];
 }
+/* Add this to a global CSS file or inline if you have a global style */
+
 
 .subtitle {
     @apply pt-6 text-[2em] mb-8 text-[rgb(238,232,232)];
@@ -676,7 +704,8 @@
 .button {
     @apply flex justify-end;
     @apply px-8 py-1 bg-gray-200 text-[#084B8F] border-none cursor-pointer transition-colors text-sm ml-auto rounded-lg;
-    @apply absolute right-6;
+    @apply absolute ;
+    right:-75px
 }
 
 
@@ -699,9 +728,14 @@
     @apply text-sm; /* Added margin-top to move it down */
 }
 
+.top-bar-right {
+    @apply relative; /* Make this container relative for positioning the button */
+}
 /* Top bar right side (language selector or other buttons) */
 .top-bar-right button {
-    @apply bg-transparent border-none text-white cursor-pointer text-sm p-0 ;
+    @apply bg-transparent border-none text-white cursor-pointer text-sm p-0;
+    position: relative;
+    top: 12px;
 }
 
 /* Remove underline on hover */
@@ -853,10 +887,12 @@
 }
 .App {
     @apply text-center bg-black min-h-screen; /* Text alignment, background color, and minimum height */
+
 }
 body {
     @apply m-0 font-sans antialiased; /* Reset margin, set font family, and apply antialiasing */
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 }
 
 code {
@@ -886,6 +922,11 @@ code {
 .hero-description {
   @apply text-gray-600 text-sm;
 }
+.content-button.selected {
+    background-color: #084b8f; /* Example selected background color */
+    color: white;
+  }
+  
 
 .partnership-box {
   @apply bg-black p-6 rounded-lg;
@@ -984,161 +1025,276 @@ code {
 /* Custom styles for the community page */
 .community-page-container {
     @apply w-full h-auto px-4 py-8; /* Responsive container with padding */
-  }
-  
-  .custom-svg {
+}
+
+.custom-svg {
     @apply w-full h-auto; /* Makes the SVG responsive */
-  }
-  
-  .fill-blue {
-    @apply fill-[#094366]; /* Applies the blue fill */
-  }
-  
-  .fill-yellow {
+}
+
+.fill-blue {
+    @apply fill-[#03567E]; /* Applies the blue fill */
+}
+
+.fill-yellow {
     @apply fill-[#ffca05]; /* Applies the yellow fill */
-  }
-  
-  .stroke-rounded {
+}
+
+.stroke-rounded {
     stroke-width: 2px;
     stroke-linecap: round; /* Manually define stroke-linecap */
-  }
-  
-  .stroke-dash {
+}
+
+.stroke-dash {
     stroke-dasharray: 6.06 5.05; /* Dashed line styling */
-  }
-  /* Custom gradient background */
-  @layer utilities {
+}
+
+/* Custom gradient background */
+@layer utilities {
     .bg-community-gradient {
-      background: linear-gradient(180deg, #03567E, #141319); /* Gradient from top (blue) to bottom (black) */
+        background: linear-gradient(180deg, #006494, #000000); /* Gradient from top (blue) to bottom (black) */
     }
-  }
-  
-  /* Community page */
-  .community-container {
-    @apply w-full h-screen flex flex-col items-center bg-community-gradient;
+}
+
+/* Community page */
+.community-container {
+    @apply w-full min-h-screen flex flex-col items-center bg-community-gradient; /* Responsive height */
     font-family: 'Rubik', sans-serif;
-  }
-  
+    margin-bottom: 0
+}
 
 .community-title {
-    @apply text-4xl font-bold text-center text-[#094366] mb-4; /* Margin bottom for spacing */
+    @apply text-3xl md:text-4xl font-bold text-center text-[#094366] mb-4;
     margin-top: 20px; /* Adjust top margin as needed */
 }
 
 .community-grid {
     @apply grid gap-6 md:grid-cols-1 lg:grid-cols-1 w-full; /* Responsive grid layout */
-    @apply flex flex-col items-center; /* Center the grid items horizontally */
-    margin-top: 20px; /* Adjust margin above grid */
-    flex: 1; /* Allow the grid to grow and fill the remaining space */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    @apply flex flex-col items-center;
+    margin-top: 20px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
 }
 
-
 .community-card {
-    @apply flex flex-col items-center p-4 rounded-lg; /* Card styling */
-    margin-bottom: 20px; /* Space between cards */
+    @apply flex flex-col items-center p-4 rounded-lg;
+    margin-bottom: 20px;
 }
 
 .community-card-title {
-    @apply text-2xl font-semibold text-gray-700 text-white; /* Card title styling */
+    @apply text-2xl font-semibold text-white;
 }
 
 .community-card-description {
-    @apply text-gray-600 mt-2 text-white; /* Description styling */
+    @apply text-gray-600 mt-2 text-white;
 }
 
 .community-button {
-    @apply bg-[#5CE6EA] text-black py-4 px-6 text-lg rounded-full hover:bg-blue-600 transition min-w-[200px] flex items-center justify-center leading-tight mt-4; /* Button styling */
+    @apply bg-[#5CE6EA] text-black py-4 px-6 text-lg rounded-full hover:bg-blue-600 transition min-w-[200px] flex items-center justify-center leading-tight mt-4;
 }
-    
+
 .cc1 {
     @apply absolute left-[17.29%] right-[77.19%] top-[16.87%] bottom-[74.63%] bg-white border-2 border-[#0AB2E0] rounded-full w-20 h-20 flex items-center justify-center overflow-hidden;
 }
 
 .cc2 {
-    @apply absolute; /* Positioning for static circle */
+    @apply absolute left-[36%] top-[300px]; /* Example position for cc2 */
 }
+
 
 .curved-line {
-    stroke: F4F4F4; /* Line color */
-    stroke-width: 2; /* Line thickness */
-    fill: none; /* Ensure background is transparent */
-    stroke-dasharray: 10, 5; /* Create breaks in the line */
-    
-}
-@keyframes popIn {
-    0% {
-      opacity: 0;
-      transform: translateY(50px) scale(0.5);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
-  
-  .circle-container {
-    opacity: 0;
-    transform: scale(0.5); /* Start at smaller size */
-    border-color: white;
-  }
-  
-  .circle-container.animate {
-    animation: popIn 0.6s ease-out forwards; /* Pop-in animation with slight delay */
-  }
-  /* Common callout styling */
-.callout {
-    @apply absolute bg-opacity-80 text-white p-2 rounded-md text-center text-sm w-36 transition-opacity duration-300 opacity-0;
-  }
-  
-/* Common callout styling */
-.callout {
-  @apply absolute bg-opacity-80 text-white p-2 rounded-md text-center text-sm w-36 transition-opacity duration-300 opacity-0;
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 10, 6; /* Dash and gap pattern */
+    stroke-dashoffset: 1000; /* Large offset initially */
+    animation: drawDashedLine 3s linear forwards; /* Run once and retain final state */
+    animation-fill-mode: forwards; /* Retain end position */
 }
 
-/* Individual callout styles */
+@keyframes drawDashedLine {
+    0% {
+        stroke-dashoffset: 1000;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1; /* Fade in */
+    }
+    100% {
+        stroke-dashoffset: 0; /* Complete line */
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.circle-container {
+    opacity: 0;
+    transform: scale(0.5);
+    border-color: white;
+}
+
+.circle-container.animate {
+    animation: popIn 0.6s ease-out forwards;
+    animation-delay: 0.2s; /* Slight delay for smoother appearance */
+}
+
+/* Common callout styling */
+.callout {
+    @apply absolute p-2 rounded-md text-center text-sm w-36 transition-opacity duration-300 opacity-0 shadow-lg;
+}
+
+/* Individual callout styles with Orange Background and Arrow */
 .callout-cc1 {
-  @apply top-12 left-20 bg-pink-500;
+    @apply relative top-[-20px] left-10 bg-[#5CE6EA] text-black p-4 rounded-lg;
+}
+.callout-cc1::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Positions the pointer below the box */
+    left: 20px; /* Adjust this to move the pointer horizontally */
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #5CE6EA transparent transparent transparent;
 }
 
 .callout-cc2 {
-  @apply top-72 left-36 bg-purple-500;
+    @apply top-[-20px] left-10 bg-[#5CE6EA] text-black p-4 rounded-lg;
+}
+.callout-cc2::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Positions the pointer below the box */
+    left: 20px; /* Adjust this to move the pointer horizontally */
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #5CE6EA transparent transparent transparent; /* Use Tailwind orange-500 color */
 }
 
 .callout-cc3 {
-  @apply top-64 left-80 bg-indigo-500;
+    @apply top-[-20px] left-10 bg-[#5CE6EA] text-black p-4 rounded-lg;
+}
+.callout-cc3::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #5CE6EA transparent transparent transparent;
 }
 
 .callout-cc4 {
-  @apply top-[600px] left-[24px] bg-blue-500;
+    @apply top-[-25px] left-[30px] bg-[#5CE6EA] text-black p-4 rounded-lg;
+}
+.callout-cc4::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #5CE6EA transparent transparent transparent;
 }
 
 .callout-cc5 {
-  @apply top-[620px] left-[112px] bg-sky-500; /* Use square brackets */
+    @apply top-[-20px] left-[35px] bg-[#5CE6EA] text-black p-4 rounded-lg;
+}
+.callout-cc5::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #5CE6EA transparent transparent transparent;
 }
 
 .callout-cc6 {
-  @apply top-[650px] left-[750px] bg-cyan-500;
+    @apply top-[-25px] left-[15px] bg-[#5CE6EA] text-black p-4 rounded-lg;
+}
+.callout-cc6::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #5CE6EA transparent transparent transparent;
 }
 
 .callout-cc7 {
-  @apply top-36 left-[1050px] bg-teal-500;
+    @apply top-[-25px] left-[25px] bg-[#5CE6EA] text-black p-4 rounded-lg;
+}
+.callout-cc7::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #5CE6EA transparent transparent transparent;
 }
 
 .callout-cc8 {
-  @apply top-80 left-[1330px] bg-green-500;
+    @apply top-[-24px] left-[20px] bg-[#5CE6EA] text-black p-4 rounded-lg;
+}
+.callout-cc8::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #5CE6EA transparent transparent transparent;
 }
 
 .callout-cc9 {
-  @apply top-[520px] left-[1230px] bg-lime-500;
+    @apply top-[-24px] left-[20px] bg-[#5CE6EA] text-black p-4 rounded-lg;
+}
+.callout-cc9::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #5CE6EA transparent transparent transparent;
 }
 
 .callout-cc10 {
-  @apply top-[680px] left-[920px] bg-yellow-500;
+    @apply top-[-24px] left-[23px] bg-[#5CE6EA] text-black p-4 rounded-lg;
+}
+.callout-cc10::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #5CE6EA transparent transparent transparent;
 }
 
-/* Visible state */
-.callout-visible {
-  @apply opacity-100;
-}
+
+/* Community HeroPage Component Styling */
+
+.cmhero-container {
+    @apply bg-blue-900 flex items-center justify-center h-screen;
+  }
+  
+  .cmhero-content {
+    @apply text-center p-8;
+  }
+  
+  .cmhero-title {
+    @apply text-4xl font-bold text-white;
+  }
+  
